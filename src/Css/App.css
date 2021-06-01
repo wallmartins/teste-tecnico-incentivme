@@ -1,10 +1,10 @@
 @import './Reset.css';
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
 
 :root {
-  --text-font: 'raleway, sans-serif';
-  --title-font: 'poppins, sans-serif';
+  --text-font: 'Raleway', sans-serif;
+  --title-font: 'Poppins', sans-serif;
   --dark-blue: #000d24;
   --light-gray: #cccccc;
   --white: #ffffff;
@@ -16,6 +16,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  font-family: var(--text-font);
 }
 
 .container {
