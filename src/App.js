@@ -1,11 +1,11 @@
-import Form from './Components/Form';
+import Register from './Components/Register';
 import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
     <main className="container">
       <Sidebar />
-      <Form />
+      <Register />
     </main>
   );
 }
