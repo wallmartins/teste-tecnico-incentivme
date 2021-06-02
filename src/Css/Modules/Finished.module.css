@@ -1,0 +1,29 @@
+.finishedContainer {
+  display: grid;
+  grid-area: form;
+  justify-items: center;
+  align-items: center;
+}
+
+.finishedContent {
+  display: grid;
+  justify-items: center;
+  height: max-content;
+}
+
+.finishedSvgContainer {
+  width: 100px;
+  padding: 1rem;
+  background: var(--dark-blue);
+  border-radius: 50%;
+}
+
+.finishedDone {
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.finishedText {
+  font-size: 0.875rem;
+}
