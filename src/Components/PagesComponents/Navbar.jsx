@@ -1,4 +1,3 @@
-import Proptype from 'prop-types';
 import styles from '../../Css/Modules/Navbar.module.css';
 
 const Navbar = ({ location }) => (
@@ -47,7 +46,3 @@ const Navbar = ({ location }) => (
 );
 
 export default Navbar;
-
-Navbar.propTypes = {
-  location: Proptype.string.isRequired,
-};

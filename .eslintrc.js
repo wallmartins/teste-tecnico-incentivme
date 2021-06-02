@@ -34,5 +34,6 @@ module.exports = {
     'no-unused-expressions': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/forbid-prop-types': 'off',
+    'react/prop-types': 'off',
   },
 };
