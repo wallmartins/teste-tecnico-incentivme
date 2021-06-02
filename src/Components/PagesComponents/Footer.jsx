@@ -1,4 +1,3 @@
-import Proptype from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from '../../Css/Modules/Footer.module.css';
 import Button from './FormComponents/Button';
@@ -21,7 +20,3 @@ const Footer = ({ path }) => (
 );
 
 export default Footer;
-
-Footer.propTypes = {
-  path: Proptype.string.isRequired,
-};

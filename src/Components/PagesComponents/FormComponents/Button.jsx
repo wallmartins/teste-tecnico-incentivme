@@ -1,15 +1,10 @@
-import Proptype from 'prop-types';
 import styles from '../../../Css/Modules/Button.module.css';
 
-const Button = ({ name, value }) => (
-  <button type="button" name={name} className={styles.button}>
+const Button = ({ name, value, type, ...props }) => (
+  // eslint-disable-next-line react/button-has-type
+  <button type={type || 'button'} name={name} className={styles.button} {...props}>
     {value}
   </button>
 );
 
 export default Button;
-
-Button.propTypes = {
-  value: Proptype.string.isRequired,
-  name: Proptype.string.isRequired,
-};
