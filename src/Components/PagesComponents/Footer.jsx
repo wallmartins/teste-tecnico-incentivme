@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from '../../Css/Modules/Footer.module.css';
 import Button from './FormComponents/Button';
 
-const Footer = ({ path }) => (
+const Footer = ({ path, button }) => (
   <footer className={styles.footerContainer}>
     <div className={styles.footerContent}>
       <hr className={styles.footerLine} />
@@ -12,7 +12,7 @@ const Footer = ({ path }) => (
           <span className={styles.footerTextBold}>telefones</span>
         </span>
         <Link to={path}>
-          <Button name="button" value="continuar" />
+          <Button name="button" value={button} />
         </Link>
       </div>
     </div>
