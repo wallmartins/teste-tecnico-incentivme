@@ -9,17 +9,17 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/">
-        <Navbar />
+        <Navbar location="Register" />
         <Register />
         <Footer path="/Contact" />
       </Route>
       <Route exact path="/Contact">
-        <Navbar />
+        <Navbar location="Contact" />
         <Contact />
         <Footer path="/Address" />
       </Route>
-      <Route exact path="/address">
-        <Navbar />
+      <Route exact path="/Address">
+        <Navbar location="Address" />
         <Address />
         <Footer path="/" />
       </Route>

@@ -1,9 +1,12 @@
+import Proptype from 'prop-types';
 import styles from '../../Css/Modules/Navbar.module.css';
 
-const Navbar = () => (
+const Navbar = ({ location }) => (
   <nav className={styles.navbarContainer}>
     <ul>
-      <li className={`${styles.navbarSteps} ${styles.navbarActive}`}>
+      <li
+        className={location === 'Register' ? `${styles.navbarSteps} ${styles.navbarActive}` : `${styles.navbarSteps}`}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" className={styles.navbarSVG} viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
@@ -15,7 +18,7 @@ const Navbar = () => (
           Passo 1: <span>Cadastro</span>
         </p>
       </li>
-      <li className={styles.navbarSteps}>
+      <li className={location === 'Contact' ? `${styles.navbarSteps} ${styles.navbarActive}` : `${styles.navbarSteps}`}>
         <svg xmlns="http://www.w3.org/2000/svg" className={styles.navbarSVG} viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
@@ -27,7 +30,7 @@ const Navbar = () => (
           Passo 2: <span>Contato</span>
         </p>
       </li>
-      <li className={styles.navbarSteps}>
+      <li className={location === 'Address' ? `${styles.navbarSteps} ${styles.navbarActive}` : `${styles.navbarSteps}`}>
         <svg xmlns="http://www.w3.org/2000/svg" className={styles.navbarSVG} viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
@@ -44,3 +47,7 @@ const Navbar = () => (
 );
 
 export default Navbar;
+
+Navbar.propTypes = {
+  location: Proptype.string.isRequired,
+};
