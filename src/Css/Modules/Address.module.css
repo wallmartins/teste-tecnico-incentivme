@@ -1,0 +1,42 @@
+.addressContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 2fr;
+  grid-area: form;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.addressUserContent {
+  display: none;
+}
+
+.allUsersAddress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.addressCard {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(0, 13, 36, 0.3);
+  border-radius: 4px;
+  box-shadow: 0.5px 0.5px 1px 1px rgba(0, 13, 36, 0.3);
+}
+
+.addressCardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 0.875rem;
+}
+
+.addressCardText {
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+}
