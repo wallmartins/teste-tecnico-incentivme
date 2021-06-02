@@ -8,9 +8,10 @@
 .label {
   background: var(--dark-blue);
   width: 130px;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem 1rem 1rem;
   color: var(--white);
   text-transform: capitalize;
+  text-align: center;
 }
 
 .input {
