@@ -1,9 +1,9 @@
-import styles from '../../../Css/Modules/FormRegister.module.css';
+import styles from '../../../Css/Modules/Form.module.css';
 import Input from '../FormComponents/Input';
 
 const Form = () => (
-  <section className={styles.registerInputsContainer}>
-    <div className={styles.registerInputs}>
+  <section className={styles.formContainer}>
+    <div className={styles.formInputs}>
       <Input id="name" name="name" type="text" label="nome" />
       <Input id="email" name="email" type="email" label="email" />
       <Input id="password" name="password" type="password" label="senha" />
