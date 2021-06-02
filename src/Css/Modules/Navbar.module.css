@@ -1,0 +1,29 @@
+.navbarContainer {
+  padding: 1rem;
+}
+
+.navbarContainer > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarContainer > ul > li {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 0 1.5rem;
+}
+
+.navbarSVG {
+  display: flex;
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.navbarSteps {
+  color: var(--light-gray);
+}
+
+.navbarActive {
+  color: var(--dark-blue);
+}
