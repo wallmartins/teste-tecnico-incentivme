@@ -1,5 +1,43 @@
 .footerContainer {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  width: 100%;
   align-items: flex-end;
+  grid-area: footer;
+}
+
+.footerContent {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    'line'
+    'content';
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.footerLine {
+  width: 90%;
+  height: 1px;
+  background: var(--light-gray);
+  opacity: 0.8;
+  border: none;
+  grid-area: line;
+}
+
+.footerInfo {
+  display: flex;
+  width: 95%;
+  grid-area: content;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+.footerText {
+  font-size: 0.75rem;
+}
+
+.footerTextBold {
+  font-weight: 600;
 }

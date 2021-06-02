@@ -1,11 +1,11 @@
-import Register from './Components/Register';
 import Sidebar from './Components/Sidebar';
+import Routes from './Routes/Routes';
 
 function App() {
   return (
     <main className="container">
       <Sidebar />
-      <Register />
+      <Routes />
     </main>
   );
 }

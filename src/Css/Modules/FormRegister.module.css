@@ -1,0 +1,60 @@
+.registerInputsContainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+.registerInputs {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  height: max-content;
+  gap: 1rem;
+}
+
+.activeCheckboxContainer {
+  display: grid;
+  align-items: flex-end;
+  width: 70%;
+  grid-template-columns: min-content auto;
+  grid-gap: 1rem;
+}
+
+.activeCheckboxContent {
+  color: var(--dark-blue);
+}
+
+.activeCheckboxInput > input {
+  opacity: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.activeCheckboxControl {
+  display: inline-grid;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--dark-blue);
+  border-radius: 3px;
+  border: 3px solid currentColor;
+}
+
+.activeCheckboxControl > svg {
+  transition: transform 0.1s ease-in 25ms;
+  transform: scale(0);
+  transform-origin: bottom left;
+}
+
+.activeCheckboxInput > input:checked + .activeCheckboxControl > svg {
+  transform: scale(1);
+}
+
+.activeCheckboxText {
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+}
+
+.activeCheckboxTextName {
+  font-weight: 600;
+}
