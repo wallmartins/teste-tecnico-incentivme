@@ -1,0 +1,22 @@
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: max-content;
+}
+
+.label {
+  background: var(--dark-blue);
+  width: 130px;
+  padding: 1rem 2rem;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  font-size: 0.875rem;
+  font-family: var(--text-font);
+  padding-left: 0.5rem;
+}

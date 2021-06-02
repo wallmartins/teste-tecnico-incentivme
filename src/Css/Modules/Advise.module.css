@@ -1,0 +1,14 @@
+.adviseContainer {
+  display: block;
+  padding-left: 2rem;
+}
+
+.adviseText {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.adviseTextWarning {
+  color: red;
+  font-weight: 600;
+}

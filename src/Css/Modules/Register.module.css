@@ -1,5 +1,8 @@
 .registerContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 80px 2fr;
+  grid-area: form;
+  align-items: center;
+  grid-area: form;
 }
