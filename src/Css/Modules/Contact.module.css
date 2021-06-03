@@ -1,0 +1,9 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 2fr;
+  grid-area: form;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}

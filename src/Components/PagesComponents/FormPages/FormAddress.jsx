@@ -25,7 +25,7 @@ const FormAddress = () => {
     <section className={styles.formContainer}>
       <div className={styles.formInputs}>
         <Input id="cep" name="cep" type="number" label="cep" onBlur={(e) => setUserCEP(e.target.value)} />
-        <div className={styles.AddressButtonContainer}>
+        <div className={stylesAdress.AddressButtonContainer}>
           <Button name="cep" value="busque seu cep" onClick={searchAdress} />
         </div>
         <form

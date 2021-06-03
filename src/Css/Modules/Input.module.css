@@ -5,6 +5,12 @@
   height: max-content;
 }
 
+@media (max-width: 48rem) {
+  .inputContainer {
+    width: 90%;
+  }
+}
+
 .label {
   background: var(--dark-blue);
   width: 130px;

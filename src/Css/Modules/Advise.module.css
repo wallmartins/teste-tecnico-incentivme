@@ -1,11 +1,19 @@
 .adviseContainer {
   display: block;
+  width: 100%;
   padding-left: 2rem;
 }
 
 .adviseText {
   font-size: 1rem;
   line-height: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .adviseText {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
 }
 
 .adviseTextWarning {
