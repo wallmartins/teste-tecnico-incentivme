@@ -1,9 +1,5 @@
 .addressContainer {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80px 2fr;
-  grid-area: form;
-  align-items: center;
   height: 100%;
   overflow: hidden;
 }
@@ -36,6 +32,23 @@
   gap: 1rem;
   padding-top: 1rem;
   padding-left: 2rem;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.allUsersAddress::-webkit-scrollbar,
+.allUsersAddress::-webkit-scrollbar {
+  width: 6px;
+}
+.allUsersAddress::-webkit-scrollbar-thumb,
+.allUsersAddress::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+.allUsersAddress::-webkit-scrollbar-track,
+.allUsersAddress::-webkit-scrollbar-track {
+  background: var(--white);
+  border-radius: 4px;
 }
 
 @media (max-width: 48rem) {

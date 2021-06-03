@@ -1,6 +1,7 @@
 .formContainer {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px;
   justify-items: center;
   align-items: center;
   height: 100%;
@@ -80,4 +81,54 @@
 
 .activeCheckboxTextName {
   font-weight: 600;
+}
+
+.footerContent {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    'line'
+    'content';
+  align-items: center;
+}
+
+.footerLine {
+  width: 90%;
+  height: 1px;
+  background: var(--light-gray);
+  opacity: 0.8;
+  border: none;
+  grid-area: line;
+}
+
+.footerInfo {
+  display: flex;
+  width: 95%;
+  grid-area: content;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .footerInfo {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.footerText {
+  font-size: 0.75rem;
+}
+
+.footerTextBold {
+  font-weight: 600;
+}
+
+.contactError {
+  display: block;
+  color: #f31;
+  font-size: 0.875rem;
 }
