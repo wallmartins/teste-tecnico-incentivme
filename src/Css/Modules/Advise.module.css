@@ -10,8 +10,11 @@
 }
 
 @media (max-width: 48rem) {
+  .adviseContainer {
+    padding-left: 1rem;
+  }
   .adviseText {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1.5rem;
   }
 }
