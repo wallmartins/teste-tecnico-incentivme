@@ -12,7 +12,7 @@ const FormAddress = () => {
   const [enableButton, setEnableButton] = useState(false);
 
   async function searchAdress() {
-    const response = await fetch(`http://viacep.com.br/ws/${userCEP}/json/`);
+    const response = await fetch(`https://viacep.com.br/ws/${userCEP}/json/`);
     const json = await response.json();
     setAddress(json);
   }
