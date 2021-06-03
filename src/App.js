@@ -1,3 +1,4 @@
+import React from 'react';
 import Sidebar from './Components/Sidebar';
 import Routes from './Routes/Routes';
 
