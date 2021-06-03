@@ -12,22 +12,22 @@ const Routes = () => (
       <Route exact path="/">
         <Navbar location="Register" />
         <Register />
-        <Footer path="/Contact" button="continuar" />
+        <Footer path="/Contact" nextPage="adicionar seu contato" button="continuar" />
       </Route>
       <Route exact path="/Contact">
         <Navbar location="Contact" />
         <Contact />
-        <Footer path="/Address" button="continuar" />
+        <Footer path="/Address" nextPage="adicionar seu endereço" button="continuar" />
       </Route>
       <Route exact path="/Address">
         <Navbar location="Address" />
         <Address />
-        <Footer path="/Finished" button="finalizar" />
+        <Footer path="/Finished" nextPage="finalizar o cadastro" button="finalizar" />
       </Route>
       <Route exact path="/Finished">
         <Navbar location="Finished" />
         <Finished />
-        <Footer path="/" button="novo cadastro" />
+        <Footer path="/" nextPage="voltar para home" button="novo cadastro" />
       </Route>
     </Switch>
   </BrowserRouter>
