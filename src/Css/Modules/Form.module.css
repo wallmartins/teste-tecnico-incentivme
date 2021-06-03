@@ -6,6 +6,13 @@
   height: 100%;
 }
 
+@media (max-width: 64rem) {
+  .formContainer {
+    display: flex;
+    width: 100%;
+  }
+}
+
 .formInputs {
   display: grid;
   justify-items: center;
@@ -20,6 +27,13 @@
   width: 70%;
   grid-template-columns: min-content auto;
   grid-gap: 1rem;
+}
+
+@media (max-width: 48rem) {
+  .activeCheckboxContainer {
+    width: 90%;
+    align-items: center;
+  }
 }
 
 .activeCheckboxContent {
@@ -56,12 +70,14 @@
   line-height: 1.2rem;
 }
 
-.activeCheckboxTextName {
-  font-weight: 600;
+@media (max-width: 48rem) {
+  .activeCheckboxText {
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
 }
 
-.AddressButtonContainer {
-  display: grid;
-  justify-items: flex-end;
-  width: 70%;
+.activeCheckboxTextName {
+  font-weight: 600;
 }

@@ -4,6 +4,12 @@
   grid-area: sidebar;
 }
 
+@media (max-width: 62rem) {
+  .sidebarContainer {
+    display: none;
+  }
+}
+
 .logo {
   padding-top: 1rem;
   padding-left: 1rem;
@@ -40,5 +46,5 @@
 }
 
 .asideSVG {
-  width: 500px;
+  width: 100%;
 }

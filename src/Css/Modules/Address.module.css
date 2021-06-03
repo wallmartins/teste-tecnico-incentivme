@@ -8,8 +8,26 @@
   overflow: hidden;
 }
 
+@media (max-width) {
+  .addressContainer {
+    overflow-y: scroll;
+  }
+}
+
 .addressUserContent {
   display: none;
+}
+
+.AddressButtonContainer {
+  display: grid;
+  justify-items: flex-end;
+  width: 70%;
+}
+
+@media (max-width: 48rem) {
+  .AddressButtonContainer {
+    width: 90%;
+  }
 }
 
 .allUsersAddress {
@@ -18,6 +36,14 @@
   gap: 1rem;
   padding-top: 1rem;
   padding-left: 2rem;
+}
+
+@media (max-width: 48rem) {
+  .allUsersAddress {
+    padding-left: 0;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .addressCard {
@@ -39,4 +65,15 @@
 .addressCardText {
   font-size: 0.875rem;
   line-height: 1.2rem;
+}
+
+@media (max-width: 48rem) {
+  .addressCardTitle {
+    font-size: 1rem;
+  }
+
+  .addressCardText {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
 }
