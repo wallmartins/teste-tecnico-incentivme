@@ -31,12 +31,11 @@ const useValidateForm = (type) => {
       setError(types[type].message);
       return false;
     }
+    if (localStorage.getItem(targetValue) === targetValue) {
+      setError('Email já cadastrado!');
+      return false;
+    }
     if (type === 'email') {
-      if (localStorage.getItem(targetValue) === targetValue) {
-        setError('Email já cadastrado!');
-        return false;
-      }
-
       localStorage.setItem(targetValue, targetValue);
       return true;
     }
@@ -47,6 +46,7 @@ const useValidateForm = (type) => {
   function onChange({ target }) {
     if (error) validate(target.value);
     setValue(target.value);
+    return true;
   }
 
   return {

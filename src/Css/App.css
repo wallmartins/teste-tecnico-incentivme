@@ -43,14 +43,14 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 75rem) {
   .container {
     width: 960px;
     grid-template-columns: 400px 1fr;
   }
 }
 
-@media (max-width: 62rem) {
+@media (max-width: 48rem) {
   .container {
     grid-template:
       'nav' 100px

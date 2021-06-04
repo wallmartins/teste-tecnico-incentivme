@@ -12,7 +12,8 @@ const FormAddress = () => {
   const [enableButton, setEnableButton] = useState(false);
 
   async function searchAdress() {
-    const response = await fetch(`https://viacep.com.br/ws/${userCEP}/json/`);
+    const cep = userCEP?.toString().replace(/[^\d]+/g, '');
+    const response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
     const json = await response.json();
     setAddress(json);
   }
@@ -33,7 +34,7 @@ const FormAddress = () => {
     <>
       <section className={styles.formContainer}>
         <div className={styles.formInputs}>
-          <Input id="cep" name="cep" type="number" label="cep" onBlur={(e) => setUserCEP(e.target.value)} />
+          <Input id="cep" name="cep" type="text" label="cep" onBlur={(e) => setUserCEP(e.target.value)} />
           <div className={stylesAdress.AddressButtonContainer}>
             <Button name="cep" value="busque seu cep" onClick={searchAdress} />
           </div>
@@ -42,7 +43,7 @@ const FormAddress = () => {
             onSubmit={handleSubmit}
             className={address ? `${styles.formInputs}` : `${stylesAdress.addressUserContent}`}
           >
-            <Input id="cep" name="cep" type="text" label="rua" value={address ? address.logradouro : ''} readOnly />
+            <Input id="rua" name="rua" type="text" label="rua" value={address ? address.logradouro : ''} readOnly />
             <Input
               id="compl"
               name="compl"

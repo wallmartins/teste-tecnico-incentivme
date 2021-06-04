@@ -27,14 +27,12 @@ const FormContact = () => {
   }
 
   function checkPutNumber() {
-    if (!(valueOne.length || valueTwo.length || valueThree.length)) {
+    if (valueOne.length === 14 || valueTwo.length === 14 || valueThree.length === 14) {
+      setError(false);
+      setEnableButton(true);
+    } else {
       setError(true);
-      return false;
     }
-
-    setError(false);
-    setEnableButton(true);
-    return true;
   }
 
   return (

@@ -35,5 +35,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/forbid-prop-types': 'off',
     'react/prop-types': 'off',
+    'operator-linebreak': 'off',
   },
 };

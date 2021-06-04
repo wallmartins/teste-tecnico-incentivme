@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../../../Css/Modules/Form.module.css';
 import useValidateForm from '../../../Hooks/useValidateForm';
 import Input from '../FormComponents/Input';
@@ -10,11 +10,21 @@ const FormRegister = () => {
   const email = useValidateForm('email');
   const password = useValidateForm('password');
   const [enableButton, setEnableButton] = useState(false);
+  const [checkedButton, setCheckedButton] = useState(false);
 
-  function setEnable(event) {
-    if (!event.target.checked && !(name.validate() && email.validate() && password.validate())) return false;
-    return setEnableButton(true);
+  function setEnable() {
+    setEnableButton(true);
+    return true;
   }
+  useEffect(() => {
+    if (name.value && !email.error && email.value && !password.error && password.value && checkedButton) {
+      setEnable();
+      return true;
+    }
+
+    setEnableButton(false);
+    return true;
+  }, [name.value, email.value, password.value, email.error, password.error, checkedButton]);
 
   return (
     <>
@@ -26,7 +36,7 @@ const FormRegister = () => {
           <div className={styles.activeCheckboxContainer}>
             <div className={styles.activeCheckboxContent}>
               <label className={styles.activeCheckboxInput}>
-                <input type="checkbox" name="checked" required onClick={setEnable} />
+                <input type="checkbox" name="checked" required onClick={() => setCheckedButton(!checkedButton)} />
                 <span className={styles.activeCheckboxControl}>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                     <path fill="none" stroke="white" strokeWidth="3" d="M1.73 12.91l6.37 6.37L22.79 4.59" />
